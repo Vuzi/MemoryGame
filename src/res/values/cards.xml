@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="cardPerRow">4</integer>
+    <integer name="cardPerColumn">4</integer>
+    <integer name="cardImageSize">256</integer>
+    <integer name="cardMaxValue">16</integer>
+</resources>

@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:context="com.vuzi.memorygame.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/gameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <LinearLayout
+                android:id="@+id/gameWonMessage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:background="#C4C4C4"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/game_won"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/t_game_won"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Moves :   Timer :"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/t_game_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Score: "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_weight="0.5" >
+
+            <Button
+                android:id="@+id/b_game_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="30dp"
+                android:text="@string/game_new" />
+
+            <Spinner
+                android:id="@+id/s_game_size_"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="14dp"
+                android:layout_marginStart="28dp"
+                android:layout_toEndOf="@+id/b_game_new"
+                android:layout_toRightOf="@+id/b_game_new"
+                android:entries="@array/possible_sizes"
+                android:prompt="@string/game_size" />
+
+            <com.vuzi.memorygame.MiliChronometer
+                android:id="@+id/chronometer"
+                android:layout_width="40dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="32dp"
+                android:text="MiliChronometer" />
+
+            <TextView
+                android:id="@+id/moves"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/chronometer"
+                android:layout_alignParentTop="true"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/moves"
+                android:text="@string/game_moves" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/chronometer"
+                android:layout_alignBottom="@+id/chronometer"
+                android:layout_alignLeft="@+id/textView1"
+                android:text="@string/game_timer" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

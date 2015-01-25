@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MemoryGame</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_test_activity">MainActivity</string>
+    <string name="game_size">Game size</string>
+    <string name="game_new">New game</string>
+    <string name="game_moves">Moves:</string>
+    <string name="game_timer">Timer:</string>
+    <string name="game_won">You won !</string>
+    <string name="game_score">Score:</string>
+
+    <string-array name="possible_sizes">
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+        <item>12</item>
+        <item>14</item>
+    </string-array>
+
+    <string name="title_activity_layout">MainActivity</string>
+
+</resources>
