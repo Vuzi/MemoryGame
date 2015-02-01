@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Memory Game</string>
+    <string name="game_size">Taille jeu</string>
+    <string name="game_new">Nouvelle partie</string>
+    <string name="game_view_score">Voir les scores</string>
+    <string name="game_moves">Coups :</string>
+    <string name="game_timer">Temps :</string>
+    <string name="game_won">Vous avez gagné !</string>
+    <string name="game_score">Score :</string>
+    <string name="game_size2">Taille :</string>
+    <string name="score_index">#</string>
+    <string name="score_score">Score</string>
+    <string name="score_size">Taille</string>
+    <string name="score_time">Temps</string>
+    <string name="score_moves">Coups</string>
+
+    <string-array name="possible_sizes">
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+        <item>12</item>
+        <item>14</item>
+    </string-array>
+
+    <string name="title_activity_memory_game_game_screen">Memory Game - Jeu</string>
+    <string name="title_activity_memory_game_start_screen">Memory Game</string>
+    <string name="title_activity_memory_game_score_screen">Memory Game - Scores</string>
+
+</resources>

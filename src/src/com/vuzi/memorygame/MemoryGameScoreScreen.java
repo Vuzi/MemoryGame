@@ -3,6 +3,7 @@ package com.vuzi.memorygame;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TableRow.LayoutParams;
@@ -22,6 +23,11 @@ public class MemoryGameScoreScreen extends Activity {
 		
 		MemoryGameApplication app = (MemoryGameApplication) getApplication();
 		TableLayout tlayout = (TableLayout) findViewById(R.id.score_table);
+		
+		// Clean the layout
+		View header = tlayout.getChildAt(0);
+		tlayout.removeAllViews();
+		tlayout.addView(header);
 		
 		int i = 0;
 		LayoutParams params;
