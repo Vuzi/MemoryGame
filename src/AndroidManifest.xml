@@ -10,32 +10,25 @@
 
     <application
         android:allowBackup="true"
+        android:name="com.vuzi.memorygame.MemoryGameApplication"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:name=".MemoryGameStartScreen"
+            android:label="@string/title_activity_memory_game_start_screen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".TestActivity"
-            android:label="@string/title_activity_test" >
-            <intent-filter>
-                <action android:name="android.intent.action.AIRPLANE_MODE" />
-            </intent-filter>
+            android:name=".MemoryGameGameScreen"
+            android:label="@string/title_activity_memory_game_game_screen" >
         </activity>
         <activity
-            android:name=".TestActivityActivity"
-            android:label="@string/title_activity_test_activity" >
-        </activity>
-        <activity
-            android:name=".LayoutActivity"
-            android:label="@string/title_activity_layout" >
+            android:name=".MemoryGameScoreScreen"
+            android:label="@string/title_activity_memory_game_score_screen" >
         </activity>
     </application>
 

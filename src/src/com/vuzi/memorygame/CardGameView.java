@@ -25,7 +25,7 @@ public class CardGameView extends GridLayout {
 	private Drawable drawableBack = null;
 	private CardView lastCard;
 
-	private MainActivity parent;
+	private MemoryGameGameScreen parent;
 	private MiliChronometer chrono;
 	private TextView moveConter;
 	
@@ -40,7 +40,7 @@ public class CardGameView extends GridLayout {
 	 * @param context The context.
 	 * @param cardGame The cardGame.
 	 */
-	public CardGameView(MainActivity parent, CardGame cardGame) {
+	public CardGameView(MemoryGameGameScreen parent, CardGame cardGame) {
 		super(parent.getApplicationContext());
 		
 		this.parent = parent;
@@ -212,8 +212,16 @@ public class CardGameView extends GridLayout {
 		chrono.stop();
 		cardGame.computeScore(moves, chrono.getMiliseconds());
 		
+		// Score
+		Score score = new Score(cardGame.getScore(), cards.length, moves, chrono.getMiliseconds());
+		
+		// Save the score
+		MemoryGameApplication app = (MemoryGameApplication) parent.getApplication();
+		app.addScore(score);
+		app.saveScores(); // Force the save
+		
 		// Winning message
-		parent.displayWonMessage(moves, (String) chrono.getText(), cardGame.getScore());
+		parent.displayWonMessage(score);
 	}
 	
 	/**

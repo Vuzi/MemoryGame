@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    tools:context="com.vuzi.memorygame.MainActivity" >
+    tools:context="com.vuzi.memorygame.MemoryGameGameScreen" >
 
     <LinearLayout
         android:id="@+id/main"
@@ -100,7 +100,7 @@
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/t_score1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/chronometer"
                 android:layout_alignBottom="@+id/chronometer"
-                android:layout_alignLeft="@+id/textView1"
+                android:layout_alignLeft="@+id/t_score1"
                 android:text="@string/game_timer" />
 
         </RelativeLayout>

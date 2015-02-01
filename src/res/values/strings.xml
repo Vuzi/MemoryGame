@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MemoryGame</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Memory Game</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_test">TestActivity</string>
-    <string name="title_activity_test_activity">MainActivity</string>
     <string name="game_size">Game size</string>
     <string name="game_new">New game</string>
+    <string name="game_view_score">View scores</string>
     <string name="game_moves">Moves:</string>
     <string name="game_timer">Timer:</string>
     <string name="game_won">You won !</string>
     <string name="game_score">Score:</string>
+    <string name="game_size2">Size:</string>
+    <string name="score_index">#</string>
+    <string name="score_score">Score</string>
+    <string name="score_size">Size</string>
+    <string name="score_time">Time</string>
+    <string name="score_moves">Moves</string>
 
     <string-array name="possible_sizes">
         <item>2</item>
@@ -23,6 +27,8 @@
         <item>14</item>
     </string-array>
 
-    <string name="title_activity_layout">MainActivity</string>
+    <string name="title_activity_memory_game_game_screen">Memory Game - Game</string>
+    <string name="title_activity_memory_game_start_screen">Memory Game</string>
+    <string name="title_activity_memory_game_score_screen">Memory Game - Scores</string>
 
 </resources>

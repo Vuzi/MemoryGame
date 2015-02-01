@@ -20,7 +20,7 @@ import android.widget.Spinner;
  * @author Vuzi
  *
  */
-public class MainActivity extends Activity {
+public class MemoryGameGameScreen extends Activity {
 	
 	private CardGameView cardView;
 	private CardGame cardGame;
@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// Init
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_memory_game_game_screen);
 
 		// Get references
 		gameLayout = (RelativeLayout) findViewById(R.id.gameLayout);
@@ -86,7 +86,7 @@ public class MainActivity extends Activity {
 		
 		// Hide or show winning message
 		if(cardGame.testGameWon())
-			displayWonMessage(cardView.getMoves(), (String) chrono.getText(), cardGame.getScore());
+			displayWonMessage(new Score(cardGame.getScore(), gameSize, cardView.getMoves(), cardGame.getScore()));
 		else
 			hideWonMessage();
 	}
@@ -131,9 +131,6 @@ public class MainActivity extends Activity {
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		
 		// Button & spinner
 		final Spinner gameSize = (Spinner) findViewById(R.id.s_game_size_);
 		Button loadButton = (Button) findViewById(R.id.b_game_new);
@@ -225,7 +222,7 @@ public class MainActivity extends Activity {
 	/**
 	 * Display the winning message
 	 */
-	public void displayWonMessage(int moves, String miliseconds, int score) {
+	public void displayWonMessage(Score score) {
 
 		// Display won message
 		LinearLayout wonLayout = (LinearLayout) findViewById(R.id.gameWonMessage);
@@ -234,11 +231,10 @@ public class MainActivity extends Activity {
 		wonLayout.bringToFront();
 		
 		TextView wonMessage = (TextView) findViewById(R.id.t_game_won);
-		wonMessage.setText(getResources().getString(R.string.game_moves) + " " + moves + "    " + getResources().getString(R.string.game_timer) + " " + miliseconds);
-;
+		wonMessage.setText(getResources().getString(R.string.game_moves) + " " + score.getMoves() +
+				"    " + getResources().getString(R.string.game_timer) + " " + score.getFormatedMiliseconds());
 		
 		TextView scoreMessage = (TextView) findViewById(R.id.t_game_score);
-		scoreMessage.setText(getResources().getString(R.string.game_score) + " " + score);
-		
+		scoreMessage.setText(getResources().getString(R.string.game_score) + " " + score.getValue());
 	}
 }
