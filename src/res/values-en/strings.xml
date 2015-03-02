@@ -15,14 +15,15 @@
     <string name="score_size">Size</string>
     <string name="score_time">Time</string>
     <string name="score_moves">Moves</string>
+    <string name="score_removes">Removes</string>
+    <string name="score_cancel">Cancel</string>
+    <string name="score_remove_msg">Score #%d deleted!</string>
 
     <string-array name="possible_sizes">
         <item>4</item>
         <item>6</item>
         <item>8</item>
         <item>10</item>
-        <item>12</item>
-        <item>14</item>
     </string-array>
 
     <string name="title_activity_memory_game_game_screen">Memory Game - Game</string>

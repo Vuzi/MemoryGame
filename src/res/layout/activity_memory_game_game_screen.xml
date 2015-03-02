@@ -40,14 +40,12 @@
                     android:id="@+id/t_game_won"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Moves :   Timer :"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:id="@+id/t_game_score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Score: "
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
             </LinearLayout>
@@ -71,8 +69,8 @@
                 android:text="@string/game_new" />
 
             <Spinner
-                android:id="@+id/s_game_size_"
-                android:layout_width="50dp"
+                android:id="@+id/s_game_size"
+                android:layout_width="53dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="14dp"
@@ -87,17 +85,18 @@
                 android:layout_width="40dp"
                 android:layout_height="15dp"
                 android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="32dp"
-                android:text="MiliChronometer" />
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"/>
 
             <TextView
                 android:id="@+id/moves"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/chronometer"
-                android:layout_alignParentTop="true"
-                android:text="TextView" />
+                android:layout_alignStart="@+id/chronometer"
+                android:layout_alignParentTop="true"/>
 
             <TextView
                 android:id="@+id/t_score1"
@@ -105,7 +104,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_toLeftOf="@+id/moves"
+                android:layout_toStartOf="@+id/moves"
                 android:text="@string/game_moves" />
 
             <TextView
@@ -114,6 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/chronometer"
                 android:layout_alignBottom="@+id/chronometer"
+                android:layout_alignStart="@+id/t_score1"
                 android:layout_alignLeft="@+id/t_score1"
                 android:text="@string/game_timer" />
 

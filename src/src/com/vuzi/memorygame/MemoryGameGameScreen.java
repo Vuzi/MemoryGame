@@ -132,7 +132,7 @@ public class MemoryGameGameScreen extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Button & spinner
-		final Spinner gameSize = (Spinner) findViewById(R.id.s_game_size_);
+		final Spinner gameSize = (Spinner) findViewById(R.id.s_game_size);
 		Button loadButton = (Button) findViewById(R.id.b_game_new);
 		loadButton.setOnClickListener(new OnClickListener() {
 
@@ -145,9 +145,10 @@ public class MemoryGameGameScreen extends Activity {
 		});
 		
 		// Create first game
-		if(savedData != null && savedData.containsKey("game_size"))
+		if(savedData != null && savedData.containsKey("game_size")) {
 			createCardGame(savedData);
-		else
+			gameSize.setSelection((savedData.getInt("game_size") - 4) / 2);
+		} else
 			createCardGame(4);
 		
 		return true;
@@ -159,7 +160,7 @@ public class MemoryGameGameScreen extends Activity {
 	 * @return
 	 */
 	public int guessCardSize(int gameSize) {
-		int width = (gameLayout.getWidth() / (1 + gameSize)) - gameSize * 2;
+		int width = (gameLayout.getWidth()) / (1 + gameSize) - gameSize;
 		int height = (gameLayout.getHeight() / (1 + gameSize)) - gameSize * 2;
 
 		return width > height ? height : width;

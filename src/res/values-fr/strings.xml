@@ -15,15 +15,15 @@
     <string name="score_size">Taille</string>
     <string name="score_time">Temps</string>
     <string name="score_moves">Coups</string>
+    <string name="score_removes">Supprimer</string>
+    <string name="score_cancel">Annuler</string>
+    <string name="score_remove_msg">Score #%d supprimé !</string>
 
     <string-array name="possible_sizes">
-        <item>2</item>
         <item>4</item>
         <item>6</item>
         <item>8</item>
         <item>10</item>
-        <item>12</item>
-        <item>14</item>
     </string-array>
 
     <string name="title_activity_memory_game_game_screen">Memory Game - Jeu</string>

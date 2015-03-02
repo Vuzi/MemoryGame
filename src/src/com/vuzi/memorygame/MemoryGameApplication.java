@@ -59,8 +59,8 @@ public class MemoryGameApplication extends Application {
 			objectOutputStream = new ObjectOutputStream(outputStream);
 			
 			// Write the scores
-			if(scores.size() > 100)
-				objectOutputStream.writeObject(scores.subList(0, 100));
+			if(scores.size() > 50)
+				objectOutputStream.writeObject(scores.subList(0, 50));
 			else
 				objectOutputStream.writeObject(scores);
 			

@@ -194,7 +194,7 @@ public class CardGameView extends GridLayout {
 								lastCard = null;
 								inAction = 0;
 							}
-						}, 500);
+						}, 400);
 					} else
 						inAction--;
 				} else {
